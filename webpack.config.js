@@ -6,17 +6,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 
 module.exports = function (){
-/*  const htmlTemplate = fs.readdirSync("src/").forEach((file) => {
-    if (file.match(/\.html$/)) {
-        let filename = file.substring(0, file.length - 4);
-        templates.push(
-            new HTMLWebpackPlugin({
-                filename: filename + ".html",
-            })
-        );
-    }
-});
-    });*/
     let arrTemplates = fs.readdirSync("src/");
     arrTemplates.forEach((file) => {
         if (file.match(/\.html$/)) {
@@ -45,6 +34,14 @@ module.exports = function (){
                 {
                     test: /\.css$/,
                     use: ['style-loader','css-loader']
+                },
+                {
+                    type: "javascript/auto",
+                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    loader: "file-loader",
+                    options: {
+                        name: "./images/" + "[name].[ext]",
+                    }
                 }
             ]
         }

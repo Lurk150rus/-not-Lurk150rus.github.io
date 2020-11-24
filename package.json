@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Hello, World! You made a test, bro!\" ",
-    "start": "webpack --mode development --watch --config webpack.config.js",
+    "start": "webpack --mode development --config webpack.config.js",
     "minify": "webpack --mode production --config webpack.config.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.6.0",
