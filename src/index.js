@@ -1,3 +1,4 @@
+import * as $ from 'jquery'
 import './styles/style.css'
 function importAll(r) {
     return r.keys().map(r);
