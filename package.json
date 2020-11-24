@@ -4,7 +4,9 @@
   "description": "This is a project, where the young man started to do his layout.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Hello, World! You made a test, bro!\" ",
+    "start": "webpack --mode development --watch --config webpack.config.js",
+    "minify": "webpack --mode production --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,10 @@
   },
   "homepage": "https://github.com/Lurk150rus/Lurk150rus.github.io#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
     "webpack": "^5.6.0",
     "webpack-cli": "^4.2.0"
   }
