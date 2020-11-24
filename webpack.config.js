@@ -25,6 +25,11 @@ module.exports = function (){
             filename: '[name].[hash].js',
             path: path.resolve(__dirname, './dist')
         },
+        optimization: {
+            splitChunks: {
+                chunks: "all"
+            }
+        },
         plugins: [
             ...templates,
             new CleanWebpackPlugin()
