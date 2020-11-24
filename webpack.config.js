@@ -30,6 +30,10 @@ module.exports = function (){
                 chunks: "all"
             }
         },
+        devServer: {
+            port: 3010,
+
+        },
         plugins: [
             ...templates,
             new CleanWebpackPlugin()
