@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Montserrat";
+    src:
+            url(../fonts/Montserrat-Black.ttf) format("truetype"),
+            url(../fonts/Montserrat-BlackItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Bold.ttf) format("truetype"),
+            url(../fonts/Montserrat-BoldItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-ExtraBold.ttf) format("truetype"),
+            url(../fonts/Montserrat-ExtraBoldItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-ExtraLight.ttf) format("truetype"),
+            url(../fonts/Montserrat-ExtraLightItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Italic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Light.ttf) format("truetype"),
+            url(../fonts/Montserrat-LightItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Medium.ttf) format("truetype"),
+            url(../fonts/Montserrat-MediumItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Regular.ttf) format("truetype"),
+            url(../fonts/Montserrat-SemiBold.ttf) format("truetype"),
+            url(../fonts/Montserrat-SemiBoldItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Thin.ttf) format("truetype"),
+            url(../fonts/Montserrat-ThinItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Bold.ttf) format("truetype"),
+            url(../fonts/Montserrat-Light.ttf) format("truetype"),
+            url(../fonts/Montserrat-Medium.ttf) format("truetype"),
+            url(../fonts/Montserrat-Regular.ttf) format("truetype"),
+            url(../fonts/Montserrat-SemiBoldItalic.ttf) format("truetype"),
+            url(../fonts/Montserrat-Thin.ttf) format("truetype"),
+            url(../fonts/Montserrat-ThinItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Quicksand";
+    src:
+            url(../fonts/Quicksand-Bold.ttf) format("truetype"),
+            url(../fonts/Quicksand-Light.ttf) format("truetype"),
+            url(../fonts/Quicksand-Medium.ttf) format("truetype"),
+            url(../fonts/Quicksand-Regular.ttf) format("truetype"),
+            url(../fonts/Quicksand-SemiBold.ttf) format("truetype"),
+            url(../fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+}

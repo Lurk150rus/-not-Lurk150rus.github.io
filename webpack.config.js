@@ -37,10 +37,17 @@ module.exports = function (){
                 },
                 {
                     type: "javascript/auto",
-                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    test: /\.(jpe?g|png|gif|svg)$/,
                     loader: "file-loader",
                     options: {
                         name: "./images/" + "[name].[ext]",
+                    }
+                },
+                {
+                    test: /\.(ttf|woff|woff2|eot)$/,
+                    loader: "file-loader",
+                    options: {
+                        name: "./fonts/" + "[name].[ext]",
                     }
                 }
             ]
