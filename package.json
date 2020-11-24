@@ -1,0 +1,24 @@
+{
+  "name": "lurk150rus.github.io",
+  "version": "1.0.0",
+  "description": "This is a project, where the young man started to do his layout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lurk150rus/Lurk150rus.github.io.git"
+  },
+  "author": "Kirill Sasyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lurk150rus/Lurk150rus.github.io/issues"
+  },
+  "homepage": "https://github.com/Lurk150rus/Lurk150rus.github.io#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
