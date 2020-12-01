@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const fs = require('fs');
 const templates = [];
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = function (){
@@ -14,7 +15,14 @@ module.exports = function (){
                 new HTMLWebpackPlugin({
                     template: "src/" + filename,
                     filename: filename,
-                })
+                }),
+                new MiniCssExtractPlugin({
+                    // Options similar to the same options in webpackOptions.output
+                    // all options are optional
+                    filename: '[name].css',
+                    chunkFilename: '[id].css',
+                    ignoreOrder: false, // Enable to remove warnings about conflicting order
+                }),
             );
         };
     });
@@ -42,7 +50,12 @@ module.exports = function (){
             rules: [
                 {
                     test: /\.css$/,
-                    use: ['style-loader','css-loader']
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader
+                        },
+                        'css-loader',
+                    ]
                 },
                 {
                     type: "javascript/auto",
