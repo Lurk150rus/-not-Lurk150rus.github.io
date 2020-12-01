@@ -52,7 +52,10 @@ module.exports = function (){
                     test: /\.css$/,
                     use: [
                         {
-                            loader: MiniCssExtractPlugin.loader
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                publicPath: ''
+                            }
                         },
                         'css-loader',
                     ]
