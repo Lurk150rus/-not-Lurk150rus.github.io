@@ -7,20 +7,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = function (){
-    let arrTemplates = fs.readdirSync("src/");
+    let arrTemplates = fs.readdirSync("src/pug/");
     arrTemplates.forEach((file) => {
-        if (file.match(/\.html$/)) {
-            let filename = file.substring();
+        if (file.match(/\.pug$/)) {
+            let filename = file.substring(0, file.length - 4);
             templates.push(
                 new HTMLWebpackPlugin({
-                    template: "src/" + filename,
-                    filename: filename,
+                    template: "src/pug/" + filename + '.pug',
+                    filename: filename + '.html',
                 }),
                 new MiniCssExtractPlugin({
                     // Options similar to the same options in webpackOptions.output
                     // all options are optional
-                    filename: '[name].css',
-                    chunkFilename: '[id].css',
+                    filename: '[name].css',                    chunkFilename: '[id].css',
                     ignoreOrder: false, // Enable to remove warnings about conflicting order
                 }),
             );
@@ -44,10 +43,14 @@ module.exports = function (){
         },
         plugins: [
             ...templates,
-            new CleanWebpackPlugin()
+            new CleanWebpackPlugin(),
         ],
         module: {
             rules: [
+                {
+                    test: /\.pug$/,
+                    use: ["raw-loader", "pug-html-loader"],
+                },
                 {
                     test: /\.css$/,
                     use: [
