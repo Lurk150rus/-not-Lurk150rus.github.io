@@ -16,12 +16,6 @@ module.exports = function (){
                     template: "src/pug/" + filename + '.pug',
                     filename: filename + '.html',
                 }),
-                new MiniCssExtractPlugin({
-                    // Options similar to the same options in webpackOptions.output
-                    // all options are optional
-                    filename: '[name].css',                    chunkFilename: '[id].css',
-                    ignoreOrder: false, // Enable to remove warnings about conflicting order
-                }),
             );
         };
     });
@@ -44,6 +38,12 @@ module.exports = function (){
         plugins: [
             ...templates,
             new CleanWebpackPlugin(),
+            new MiniCssExtractPlugin({
+                // Options similar to the same options in webpackOptions.output
+                // all options are optional
+                filename: '[name].css',                    chunkFilename: '[id].css',
+                ignoreOrder: false, // Enable to remove warnings about conflicting order
+            }),
         ],
         module: {
             rules: [
@@ -52,7 +52,7 @@ module.exports = function (){
                     use: ["raw-loader", "pug-html-loader"],
                 },
                 {
-                    test: /\.css$/,
+                    test:/\.s[ac]ss$/i,
                     use: [
                         {
                             loader: MiniCssExtractPlugin.loader,
@@ -61,6 +61,7 @@ module.exports = function (){
                             }
                         },
                         'css-loader',
+                        'sass-loader'
                     ]
                 },
                 {
