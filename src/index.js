@@ -1,5 +1,5 @@
 import * as $ from 'jquery'
-import css from './styles/style.css'
+import css from './styles/styles.scss'
 function importAll(r) {
     return r.keys().map(r);
 }
